@@ -1,0 +1,12 @@
+.header{
+    background-color: black;
+    color: white;
+    
+    grid-column: full-start / full-end;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0, 0, 0, 0.6)), url(../img/header.jpg);
+    background-size: cover;
+    
+    text-align: center;
+    padding-top: 30vh;
+    
+}

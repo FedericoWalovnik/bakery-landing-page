@@ -1,0 +1,33 @@
+.gallery{
+    grid-column: full-start / full-end;
+
+    display: flex;
+
+    @include respond(tab-port){
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    &__img{
+        height: calc(100vw/3);
+        width: calc(100vw/3);
+        object-fit: cover;
+
+        @include respond(tab-port){
+            width: 100vw;
+        }
+        
+        &--1{
+            object-position: 83% 100%; 
+
+            @include respond(tab-port){
+                width: 100vw;
+                object-position: 20% 50%; 
+            }
+        }
+
+        &--2{
+            object-position: 83%; 
+        }
+    }
+}

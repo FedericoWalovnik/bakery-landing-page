@@ -1,0 +1,31 @@
+.info{
+    grid-column: center-start / center-end;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-column-gap: 1rem;
+    margin: 3rem 0;
+
+    &__block-text{
+        display: relative;
+    }
+
+    &__block-images{
+        & > *:not(:last-child) {
+            margin-right: .5rem;
+        }
+        display: flex;
+        justify-content: space-evenly;
+
+        @include respond(tab-land){
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__img{
+        height: 15rem;
+        width: 11rem;
+        object-fit: cover;
+    }
+}

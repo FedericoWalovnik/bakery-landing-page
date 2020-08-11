@@ -4,4 +4,139 @@
   box-sizing: inherit; }
 
 html {
-  box-sizing: content-box; }
+  box-sizing: content-box;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  line-height: 1.6rem;
+  overflow-x: hidden; }
+
+.principal-title {
+  margin-left: -1.5rem;
+  font-size: 8rem;
+  color: #fff;
+  font-family: 'Kaushan Script', cursive; }
+
+.subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem; }
+
+.paragraph--white {
+  padding-top: 7rem;
+  font-size: 1.2rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.2rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 2rem; }
+
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+.btn:link,
+.btn:visited,
+.btn {
+  border: none;
+  text-decoration: none;
+  color: #fff;
+  background-color: #333;
+  padding: .4rem 2.3rem;
+  transition: all .2s; }
+  @media only screen and (max-width: 75em) {
+    .btn:link,
+    .btn:visited,
+    .btn {
+      justify-self: center; } }
+
+.btn:active,
+.btn:hover {
+  background-color: #222; }
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh minmax(10rem, min-content) minmax(10rem, min-content) minmax(10rem, min-content) 20rem minmax(10rem, min-content) 10rem;
+  grid-template-columns: [full-start] minmax(12rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(12rem, 1fr) [full-end]; }
+
+.header {
+  background-color: black;
+  color: white;
+  grid-column: full-start / full-end;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/header.jpg);
+  background-size: cover;
+  text-align: center;
+  padding-top: 30vh; }
+
+.info {
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-column-gap: 1rem;
+  margin: 3rem 0; }
+  .info__block-text {
+    display: relative; }
+  .info__block-images {
+    display: flex;
+    justify-content: space-evenly; }
+    .info__block-images > *:not(:last-child) {
+      margin-right: .5rem; }
+    @media only screen and (max-width: 75em) {
+      .info__block-images {
+        margin-top: 2rem;
+        margin-bottom: 2rem; } }
+  .info__img {
+    height: 15rem;
+    width: 11rem;
+    object-fit: cover; }
+
+.gallery {
+  grid-column: full-start / full-end;
+  display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .gallery {
+      flex-direction: column;
+      justify-content: space-evenly; } }
+  .gallery__img {
+    height: calc(100vw/3);
+    width: calc(100vw/3);
+    object-fit: cover; }
+    @media only screen and (max-width: 56.25em) {
+      .gallery__img {
+        width: 100vw; } }
+    .gallery__img--1 {
+      object-position: 83% 100%; }
+      @media only screen and (max-width: 56.25em) {
+        .gallery__img--1 {
+          width: 100vw;
+          object-position: 20% 50%; } }
+    .gallery__img--2 {
+      object-position: 83%; }
+
+.info-2 {
+  background-color: paleturquoise;
+  grid-column: center-start / center-end; }
+
+.big-picture {
+  background-color: palevioletred;
+  grid-column: full-start / full-end; }
+
+.info-3 {
+  background-color: palegoldenrod;
+  grid-column: center-start / center-end; }
+
+.footer {
+  background-color: paleturquoise;
+  grid-column: full-start / full-end; }

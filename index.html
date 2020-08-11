@@ -2,14 +2,20 @@
 <html lang="en">
 
 <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 
+    <script src="https://kit.fontawesome.com/20e6b407f6.js" crossorigin="anonymous"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Bakery</title>
+    <title>Bakery | The best bread od the world</title>
 </head>
 
 <body class="container">
@@ -41,20 +47,45 @@
         <img src="img/gallery-03.jpg" alt="cookies" class="gallery__img">
     </section>
 
-    <section class="info-2">
-        INFO 2
+    <section class="features">
+        <div class="feature__feature">
+            <i class="fas fa-mug-hot features__icon features__icon--1"></i>
+            <h3 class="features__title">The best coffee</h3>
+            <p class="features__paragraph"> Lorem, ipsum asddasc sit amet consectetur adipisicing elit. Repellat aut cum
+                lab</p>
+        </div>
+        <div class="feature__feature">
+            <i class="fas fa-heart features__icon"></i>
+            <h3 class="features__title">Made it with love</h3>
+            <p class="features__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione architecto.
+            </p>
+        </div>
+        <div class="feature__feature">
+            <i class="fas fa-birthday-cake features__icon"></i>
+            <h3 class="features__title">Great birthday cakes</h3>
+            <p class="features__paragraph"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur.</p>
+        </div>
     </section>
 
-    <section class="big-picture">
-        BIG PICTURE
+    <section class="video-section">
+        <div class="video-section__video">
+            <video class="video-section__content" autoplay muted loop>
+                <source src="img/video.mp4" type="video/mp4">
+                Your browser is not supported!
+            </video>
+        </div>
+        <h1 class="principal-title video-section__title">
+            We make baking fun!
+        </h1>
+
     </section>
 
     <section class="info">
-        <div class="info__block-images">
+        <div class="info__block-images u-margin-top-medium">
             <img src="img/shop-01.jpg" alt="croissent" class="info__img">
             <img src="img/shop-02.jpg" alt="bread" class="info__img">
         </div>
-        <div class="info__block-text">
+        <div class="info__block-text u-margin-top-medium">
             <h2 class="subtitle u-margin-bottom-small">The recipe of happines</h2>
             <p class="info__paragraph--regular u-margin-bottom-medium">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo quam aspernatur voluptatibus quibusdam
@@ -66,7 +97,13 @@
     </section>
 
     <footer class="footer">
-        FOOTER
+        <p>&copy; Done in 2020 by Federico Walovnik. </p>
+        <div class="footer__icons">
+            <a href="https://www.linkedin.com/in/federico-walovnik/" target="_blank" class="footer__link"><i
+                    class="footer__icon fab fa-linkedin"></i></a>
+            <a href="https://dribbble.com/fedewalo" target="_blank" class="footer__link"><i
+                    class="footer__icon fab fa-dribbble-square"></i></a>
+        </div>
     </footer>
 </body>
 

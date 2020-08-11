@@ -1,0 +1,27 @@
+.video-section{
+    grid-column: full-start / full-end;
+    position: relative;
+
+    &__video {
+        height: 60vh;
+        width: 100%;
+        z-index: -1;
+        opacity: .15;
+        overflow: hidden;
+    
+    }
+    &__content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__title{
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 3rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}

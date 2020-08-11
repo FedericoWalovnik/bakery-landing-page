@@ -1,0 +1,30 @@
+.features{
+
+    grid-column: center-start / center-end;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50vh;
+
+    &__feature{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5rem;
+    }
+
+    &__icon{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        padding: 1.5rem;
+        color: rgba(0, 0, 0, 0.5);
+        border: solid 1px rgba(0, 0, 0, 0.5);
+        border-radius: 100%;
+    }
+
+    &__paragraph{
+        margin-top: .7rem;
+        font-size: 1rem;
+        line-height: 1.2rem;
+        width: 20vw;
+    }
+}

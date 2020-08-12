@@ -4,7 +4,6 @@
 
     &__video {
         height: 60vh;
-        width: 100%;
         z-index: -1;
         opacity: .45;
         overflow: hidden;
@@ -21,6 +20,9 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%);
+        transform: translate(-50%, -50%);
+        line-height: 4rem;
+        text-align: center;
+
     }
 }

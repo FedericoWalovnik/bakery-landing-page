@@ -8,6 +8,10 @@
 
     &__block-text{
         display: relative;
+
+        @include respond(tab-land){
+            margin-top: 0rem;
+        }
     }
 
     &__block-images{
@@ -18,8 +22,7 @@
         justify-content: space-evenly;
 
         @include respond(tab-land){
-            margin-top: 2rem;
-            margin-bottom: 2rem;
+            margin: 2rem 0;
         }
     }
 

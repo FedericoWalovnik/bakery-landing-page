@@ -59,11 +59,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
   background-color: #333;
   padding: .4rem 2.3rem;
   transition: all .2s; }
-  @media only screen and (max-width: 75em) {
-    .btn:link,
-    .btn:visited,
-    .btn {
-      justify-self: center; } }
 
 .btn:active,
 .btn:hover {
@@ -71,7 +66,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .container {
   display: grid;
-  grid-template-rows: 80vh minmax(10rem, min-content) minmax(10rem, min-content) minmax(10rem, min-content) 20rem minmax(10rem, min-content) 10rem;
+  grid-template-rows: 80vh minmax(10rem, min-content) minmax(10rem, min-content) minmax(min-content, 50vh) 20rem minmax(10rem, min-content) 10rem;
   grid-template-columns: [full-start] minmax(12rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(12rem, 1fr) [full-end]; }
 
 .header {
@@ -91,6 +86,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
   margin: 3rem 0; }
   .info__block-text {
     display: relative; }
+    @media only screen and (max-width: 75em) {
+      .info__block-text {
+        margin-top: 0rem; } }
   .info__block-images {
     display: flex;
     justify-content: space-evenly; }
@@ -98,8 +96,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
       margin-right: .5rem; }
     @media only screen and (max-width: 75em) {
       .info__block-images {
-        margin-top: 2rem;
-        margin-bottom: 2rem; } }
+        margin: 2rem 0; } }
   .info__img {
     height: 15rem;
     width: 11rem;
@@ -111,19 +108,23 @@ ORDER: Base + typography > general layout + grid > page layout > components
   @media only screen and (max-width: 56.25em) {
     .gallery {
       flex-direction: column;
-      justify-content: space-evenly; } }
+      justify-content: space-evenly;
+      align-items: center; } }
   .gallery__img {
     height: calc(100vw/3);
     width: calc(100vw/3);
     object-fit: cover; }
     @media only screen and (max-width: 56.25em) {
       .gallery__img {
-        width: 100vw; } }
+        width: 100%;
+        height: calc(20vw); } }
+    @media only screen and (max-width: 37.5em) {
+      .gallery__img {
+        height: calc(100vw/2); } }
     .gallery__img--1 {
       object-position: 83% 100%; }
       @media only screen and (max-width: 56.25em) {
         .gallery__img--1 {
-          width: 100vw;
           object-position: 20% 50%; } }
     .gallery__img--2 {
       object-position: 83%; }
@@ -131,32 +132,36 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .features {
   grid-column: center-start / center-end;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 50vh; }
-  .features__feature {
-    display: flex;
-    flex-direction: column;
-    margin-top: 5rem; }
+  align-items: baseline;
+  align-content: center;
+  justify-content: space-evenly; }
+  @media only screen and (max-width: 56.25em) {
+    .features {
+      flex-direction: column;
+      padding: 2rem;
+      text-align: center; } }
+  .features > *:not(:first-child) {
+    margin-top: 2rem; }
   .features__icon {
     font-size: 2rem;
     margin-bottom: 1rem;
     padding: 1.5rem;
     color: rgba(0, 0, 0, 0.5);
     border: solid 1px rgba(0, 0, 0, 0.5);
-    border-radius: 100%; }
+    border-radius: 100%;
+    justify-self: center; }
   .features__paragraph {
     margin-top: .7rem;
     font-size: 1rem;
-    line-height: 1.2rem;
-    width: 20vw; }
+    line-height: 1.2rem; }
+    .features__paragraph > *:not(:last-child) {
+      margin-right: 4rem; }
 
 .video-section {
   grid-column: full-start / full-end;
   position: relative; }
   .video-section__video {
     height: 60vh;
-    width: 100%;
     z-index: -1;
     opacity: .45;
     overflow: hidden; }
@@ -170,7 +175,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%); }
+    transform: translate(-50%, -50%);
+    line-height: 4rem;
+    text-align: center; }
 
 .footer {
   background-color: rgba(0, 0, 0, 0.8);

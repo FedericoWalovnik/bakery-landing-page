@@ -2,15 +2,20 @@
 
     grid-column: center-start / center-end;
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    align-content: center;
     justify-content: space-evenly;
-    height: 50vh;
 
-    &__feature{
-        display: flex;
+    @include respond(tab-port){
         flex-direction: column;
-        margin-top: 5rem;
+        padding: 2rem;
+        text-align: center;
     }
+
+    & > *:not(:first-child) {
+        margin-top: 2rem;
+    }
+
 
     &__icon{
         font-size: 2rem;
@@ -19,12 +24,16 @@
         color: rgba(0, 0, 0, 0.5);
         border: solid 1px rgba(0, 0, 0, 0.5);
         border-radius: 100%;
+        justify-self: center;
     }
 
     &__paragraph{
         margin-top: .7rem;
         font-size: 1rem;
         line-height: 1.2rem;
-        width: 20vw;
+
+        & > *:not(:last-child) {
+           margin-right: 4rem;
+        }
     }
 }

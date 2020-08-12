@@ -5,6 +5,7 @@
     align-items: baseline;
     align-content: center;
     justify-content: space-evenly;
+    margin: auto 0;
 
     @include respond(tab-port){
         flex-direction: column;

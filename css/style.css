@@ -66,7 +66,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .container {
   display: grid;
-  grid-template-rows: 80vh minmax(10rem, min-content) minmax(10rem, min-content) minmax(min-content, 50vh) 20rem minmax(10rem, min-content) 10rem;
+  grid-template-rows: 80vh minmax(10rem, min-content) minmax(10rem, min-content) minmax(min-content, 60vh) 20rem minmax(10rem, min-content) 10rem;
   grid-template-columns: [full-start] minmax(12rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(12rem, 1fr) [full-end]; }
 
 .header {
@@ -134,7 +134,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: flex;
   align-items: baseline;
   align-content: center;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  margin: auto 0; }
   @media only screen and (max-width: 56.25em) {
     .features {
       flex-direction: column;
@@ -161,7 +162,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   grid-column: full-start / full-end;
   position: relative; }
   .video-section__video {
-    height: 60vh;
+    height: 100%;
     z-index: -1;
     opacity: .45;
     overflow: hidden; }
